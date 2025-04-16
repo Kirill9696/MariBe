@@ -4,7 +4,7 @@
       <hr>
       <div class="friends">
         <input type="checkbox" id="friends" v-model="onlyFriends">
-        <label for="friends">Friends only</label>
+        <label for="friends">Friends</label>
       </div>
       <hr>
       <ul v-if="!onlyFriends">
