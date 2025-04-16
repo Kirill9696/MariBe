@@ -1,5 +1,14 @@
 <template>
-    <div class="app">
+    <form @submit.prevent="handleConnect()" v-if="!isLogged">
+        <div class="login">
+            <div class="text">
+                <h3>MariBe</h3>
+                <input type="text" name="" id="" placeholder="Имя" v-model="username" class="item">
+                <button class="btn item" type="submit" @click="getUsers()">Войти</button>
+            </div>
+        </div>
+    </form>
+    <div class="app" v-if="isLogged">
         <Sidebar :username="username" />
         <div class="content">
             <ChatList :chats="chats" :friends="friends" :username="username" @chat-selected="setSelectedChat" />
