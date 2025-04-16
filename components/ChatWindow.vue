@@ -36,8 +36,7 @@ export default {
   },
   data() {
     return {
-      newMessage: "",
-      friend: false
+      newMessage: ""
     };
   },
   methods: {

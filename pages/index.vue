@@ -12,8 +12,7 @@
         <Sidebar :username="username" />
         <div class="content">
             <ChatList :chats="chats" :friends="friends" :username="username" @chat-selected="setSelectedChat" />
-            <ChatWindow v-if="selectedChat" :chat="selectedChat" :sender="username" :socket="socket"
-                :friend="friend" />
+            <ChatWindow v-if="selectedChat" :chat="selectedChat" :sender="username" :socket="socket"/>
         </div>
     </div>
 </template>
@@ -35,18 +34,12 @@ export default {
     data() {
         return {
             chats: null,
-            // [
-            //     {  name: "Ivan", messages: [] },
-            //     {  name: "Kirill", messages: [] },
-            //     {  name: "Masha", messages: [] },
-            // ],
             selectedChat: null,
             username: '',
             isLogged: false,
             socket: null,
-            friends: [],
-            friend: null
-        };
+            friends: []
+            };
     },
     methods: {
         getFriends() {
