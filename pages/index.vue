@@ -58,10 +58,6 @@ export default {
             this.friends = newFriends
             console.log(this.friends)
         },
-        get() {
-            console.log(this.friends)
-        },
-
         async getUsers() {
             let response = await $fetch(`/api/messages/`);
             this.chats = response;
